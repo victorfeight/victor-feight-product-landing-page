@@ -1,0 +1,292 @@
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+#header {
+    border: solid rgb(202, 194, 194);
+    background-color: white;
+    display: flex;
+    width: 100vw;
+    height: 85px;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+}
+
+.grid-container {
+    /* position: fixed; */
+    padding-top: 58px;
+    height: 100vh;
+    display: grid;
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    min-width: 200px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.2rem;
+    grid-template-areas:
+        "email email email"
+        "first first first"
+        "second second second"
+        "third third third"
+        "video video video"
+        "card card card"
+        "footer footer footer"
+        ;
+}
+
+#nav-icon img {
+    transform: scale(0.75, 0.75);
+}
+
+#nav-bar  ul{
+    list-style: none;
+    display: flex;
+    padding-right: 6em;
+    padding-top: 2em;
+}
+
+#nav-list li {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+li a {
+    text-decoration: none;
+}
+
+.grid-row-email {
+    margin-top: 2em;
+    grid-area: email;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+/* Grid row customizing */
+#email-form {
+    display: grid;
+    justify-content: center;
+}
+
+.form-group {
+    padding-top: .80em; 
+}
+
+.game-icon {
+    margin: 20px;
+}
+
+.text-content {
+    margin: 20px;
+}
+
+
+.grid-row-first {
+    display:flex;
+    grid-area: first;
+    background-color: rgb(241, 238, 238);
+    margin: 7px 0 7px 0;
+}
+
+.grid-row-second {
+    display:flex;
+    grid-area: first;
+    grid-area: second;
+    background-color: rgb(241, 238, 238);
+    margin: 7px 0 7px 0;
+}
+
+.grid-row-third {
+    display:flex;
+    grid-area: first;
+    grid-area: third;
+    background-color: rgb(241, 238, 238);
+    margin: 7px 0 7px 0;
+}
+
+.grid-row-video {
+    padding: 2em;
+    display: flex;
+    justify-content: center;
+    grid-area: video;
+}
+
+.level {
+    color: black;
+    padding: 15px 0;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+
+.grid-row-card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    grid-area: card;
+}
+
+button {
+    background-color: rgb(17, 189, 255);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    width: 50%;
+    height: 2em;
+}
+
+button:hover {
+    color: rgb(17, 189, 255);
+    border: 1px solid rgb(17,189,255);
+    background-color: white;
+    border-radius: 10px;
+    width: 50%;
+    height: 2em;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: calc(100% / 3);
+    margin: 10px;
+    /* border: 1px solid #000;
+    border-radius: 3px; */
+    background-color: rgb(241, 238, 238);
+}
+
+.product > h3 {
+    margin-top: 15px;
+}
+
+.product > ol {
+    margin: 10px 0;
+    padding-right: 20px;
+}
+
+.product > ol > li {
+    padding: 3px 0;
+}
+
+li {
+    list-style: none;
+}
+
+.form-button {
+    margin: 10px;
+}
+
+.grid-row-footer {
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 30px;
+    grid-area: footer;
+    background-color: rgb(17, 189, 255);
+    color: white;
+}
+
+#footer-list {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#footer-list li {
+    padding: 0 10px;
+}
+
+#footer-copywrite {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 0.9em;
+}
+
+@media only screen and (max-width: 550px) {
+    .grid-row-first {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        grid-area: first;
+    }
+    
+    .grid-row-second {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        grid-area: first;
+        grid-area: second;
+    }
+    
+    .grid-row-third {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        grid-area: first;
+        grid-area: third;
+    }
+
+    .game-icon {
+        margin: 10px;
+    }
+
+    .grid-row-card-container {
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        grid-area: card;
+    }
+
+    .product {
+        width: 90%; 
+    }
+
+    #header {
+        border: solid rgb(202, 194, 194);
+        display: flex;
+        background-color: white;
+        width: 100vw;
+        height: 140px;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        z-index: 100;
+    }
+
+    #nav-bar  ul{
+        list-style: none;
+        display: flex;
+        padding-right: 0.9em;
+        padding-top: 0.3em;
+    }
+
+}
+
+@media only screen and (max-width: 981px) {
+    #header {
+        border: solid rgb(202, 194, 194);
+        display: flex;
+        background-color: white;
+        width: 100vw;
+        height: 140px;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        z-index: 100;
+    }
+
+    #nav-bar  ul{
+        list-style: none;
+        display: flex;
+        padding-right: 0.9em;
+        padding-top: 0.3em;
+    }
+
+}
